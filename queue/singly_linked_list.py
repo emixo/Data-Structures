@@ -12,8 +12,6 @@ class Node:
   def set_next(self, new_next):
     self.next = new_next
 
-
-
 class LinkedList:
   def __init__(self):
     self.head = None
@@ -42,11 +40,11 @@ class LinkedList:
     return val
 
   def remove_tail(self):
-    if self.head is None and self.tail is None:
+    if self.head is None:
       return
     current = self.head
 
-    while current.get_next() is not self.tail:
+    while current.get_next() and current.get_next() is not self.tail:
       current = current.get_next()
     val = self.tail.get_value()
     self.tail = current
