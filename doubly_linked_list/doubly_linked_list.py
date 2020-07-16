@@ -135,7 +135,7 @@ class DoublyLinkedList:
     in the List.
     """
     def get_max(self):
-         if not self.head:
+        if not self.head:
             return None
         max_val = self.head.value
         current = self.head
